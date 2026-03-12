@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bfqy54ejb83lk"
+path="res://.godot/imported/btn_backG.wav-4d4444aa3eec41e16ed1d4733f470f6b.sample"
+
+[deps]
+
+source_file="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_xam/btn_backG.wav"
+dest_files=["res://.godot/imported/btn_backG.wav-4d4444aa3eec41e16ed1d4733f470f6b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

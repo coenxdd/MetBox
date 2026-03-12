@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ds00tiatnv0kd"
+path="res://.godot/imported/engage.wav-2c59101628a62e1936cf485b9d1ed25d.sample"
+
+[deps]
+
+source_file="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_xam/engage.wav"
+dest_files=["res://.godot/imported/engage.wav-2c59101628a62e1936cf485b9d1ed25d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

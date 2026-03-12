@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtjb46ns28oan"
+path="res://.godot/imported/progress_meter.wav-aca517c9497eff58bdd40a87fc6e6a3b.sample"
+
+[deps]
+
+source_file="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_xam/progress_meter.wav"
+dest_files=["res://.godot/imported/progress_meter.wav-aca517c9497eff58bdd40a87fc6e6a3b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjr87mho0oxwp"
+path="res://.godot/imported/11 (xwb).wav-4198be8568a3f45f0eef2c9b9cd196ef.sample"
+
+[deps]
+
+source_file="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/11 (xwb).wav"
+dest_files=["res://.godot/imported/11 (xwb).wav-4198be8568a3f45f0eef2c9b9cd196ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

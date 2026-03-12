@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dyi7n5ikcrslg"
+path="res://.godot/imported/31 (xwb).wav-14c90efe3e1cf06363caac4a04cee87b.sample"
+
+[deps]
+
+source_file="res://14699/WAV/$systemupdate/AvatarEditor/31 (xwb).wav"
+dest_files=["res://.godot/imported/31 (xwb).wav-14c90efe3e1cf06363caac4a04cee87b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

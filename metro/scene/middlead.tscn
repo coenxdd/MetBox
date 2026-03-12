@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://bh0jn864n8iut"]
+
+[ext_resource type="Script" uid="uid://bh0u1txcghd8a" path="res://script/middlead.gd" id="1_86hbm"]
+[ext_resource type="Texture2D" uid="uid://4kx3jjn5enaa" path="res://14699/JPG/$systemupdate/su20076000_00000000/System Update/$flash_dash/xboxlivebg.jpg" id="2_nnfyc"]
+[ext_resource type="Texture2D" uid="uid://c3u8dkg7ruon0" path="res://14699/PNG/$systemupdate/BiometricSetup/bottom_vignette.png" id="3_2kj8i"]
+[ext_resource type="FontFile" uid="uid://ck8c1l0ac2qb2" path="res://assets/font/segoeui.ttf" id="4_ki7ts"]
+
+[sub_resource type="Animation" id="Animation_2kj8i"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_86hbm"]
+resource_name = "slidein"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.23325826, 1),
+"update": 0,
+"values": [Vector2(362, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nnfyc"]
+resource_name = "slideout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.23325826, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-362, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2kj8i"]
+_data = {
+&"RESET": SubResource("Animation_2kj8i"),
+&"slidein": SubResource("Animation_86hbm"),
+&"slideout": SubResource("Animation_nnfyc")
+}
+
+[node name="Ad1" type="Control" unique_id=1135939070]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_86hbm")
+
+[node name="Photo" type="TextureRect" parent="." unique_id=1670167416]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nnfyc")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Fade" type="TextureRect" parent="." unique_id=2023698448]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2kj8i")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="." unique_id=157772948]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 122.0
+offset_right = 357.0
+offset_bottom = 245.0
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("4_ki7ts")
+theme_override_font_sizes/font_size = 20
+text = "Pensive LIVE"
+vertical_alignment = 2
+autowrap_mode = 3
+clip_text = true
+
+[node name="Sub" type="Label" parent="." unique_id=776159335]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 137.0
+offset_right = 357.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0.5251013, 0.5251013, 0.5251013, 1)
+theme_override_constants/line_spacing = -6
+theme_override_fonts/font = ExtResource("4_ki7ts")
+theme_override_font_sizes/font_size = 14
+text = "Welcome to the Beta Test!"
+vertical_alignment = 2
+autowrap_mode = 3
+clip_text = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=909122044]
+libraries/ = SubResource("AnimationLibrary_2kj8i")

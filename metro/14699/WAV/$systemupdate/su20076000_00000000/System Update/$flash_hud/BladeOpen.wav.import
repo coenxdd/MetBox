@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://wu0f5ewuaalp"
+path="res://.godot/imported/BladeOpen.wav-3493dbd8c10503d000f4eb6d8de3e672.sample"
+
+[deps]
+
+source_file="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_hud/BladeOpen.wav"
+dest_files=["res://.godot/imported/BladeOpen.wav-3493dbd8c10503d000f4eb6d8de3e672.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

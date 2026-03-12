@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1c01filwrfon"
+path="res://.godot/imported/celebrate_sound.wav-4e29a6bfc9064d7c5fa39ba75b4f44ff.sample"
+
+[deps]
+
+source_file="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/celebrate_sound.wav"
+dest_files=["res://.godot/imported/celebrate_sound.wav-4e29a6bfc9064d7c5fa39ba75b4f44ff.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

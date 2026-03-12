@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8nqryl8ctcbl"
+path="res://.godot/imported/btn_selectG.wav-3f08e2e990ae60ec6c210c4ea3e9f540.sample"
+
+[deps]
+
+source_file="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_xam/btn_selectG.wav"
+dest_files=["res://.godot/imported/btn_selectG.wav-3f08e2e990ae60ec6c210c4ea3e9f540.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

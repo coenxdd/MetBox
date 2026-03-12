@@ -1,0 +1,362 @@
+[gd_scene format=3 uid="uid://bjo4c7y141kn4"]
+
+[ext_resource type="Script" uid="uid://bt1ocst3mbwml" path="res://script/setup.gd" id="1_axbj7"]
+[ext_resource type="AudioStream" uid="uid://r3vo8bbnc3nd" path="res://assets/ambient.mp3" id="1_ioy3b"]
+[ext_resource type="Texture2D" uid="uid://dm86867kp3uma" path="res://14699/PNG/$systemupdate/Guide.AccountRecovery/background.png" id="2_mjniw"]
+[ext_resource type="Texture2D" uid="uid://bqlprryascwa1" path="res://14699/PNG/$systemupdate/BiometricSetup/aura_highlight.png" id="3_axbj7"]
+[ext_resource type="AudioStream" uid="uid://dao7vq6pxjntr" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/1 (xwb).wav" id="3_psyyq"]
+[ext_resource type="Texture2D" uid="uid://bkx6ng024p4m1" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/aura_lowlight.png" id="4_pil26"]
+[ext_resource type="AudioStream" uid="uid://dsvjjeweyvqhh" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/6 (xwb).wav" id="4_qh41b"]
+[ext_resource type="Texture2D" uid="uid://qwh0x4b0cbrh" path="res://assets/Rectangle 4.png" id="5_7nrv4"]
+[ext_resource type="AudioStream" uid="uid://bnhihlnn4mdqe" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/28 (xwb).wav" id="5_7uuum"]
+[ext_resource type="AudioStream" uid="uid://b0o1q2g6y3110" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/snd_buttonselect.wav" id="6_kyeje"]
+[ext_resource type="Script" uid="uid://bwlf6glvxg3jb" path="res://script/setup_part_1.gd" id="6_pil26"]
+[ext_resource type="Texture2D" uid="uid://cld08v0ub1ttd" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/Controller1_DFU_shadow.png" id="6_wtsu7"]
+[ext_resource type="Texture2D" uid="uid://t21ew26i2c67" path="res://14699/PNG/$systemupdate/dash.firstuse/DFU_Controller_A.png" id="7_16he7"]
+[ext_resource type="AudioStream" uid="uid://1dtea53d327a" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/snd_buttonback.wav" id="7_pd3xe"]
+[ext_resource type="AudioStream" uid="uid://btyjqcggudknm" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/24 (xwb).wav" id="8_1ccjo"]
+[ext_resource type="Texture2D" uid="uid://g78d1n2eco1" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/Controller2_DFU.png" id="8_8gxcc"]
+[ext_resource type="AudioStream" uid="uid://n6git17a6pb8" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/36 (xwb).wav" id="9_0xylq"]
+[ext_resource type="AudioStream" uid="uid://bo16hvmrcktli" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/34 (xwb).wav" id="10_0rlo3"]
+[ext_resource type="AudioStream" uid="uid://bjtym1ae0qkbn" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/23 (xwb).wav" id="11_phex5"]
+[ext_resource type="Texture2D" uid="uid://cik5jsssu185g" path="res://14699/PNG/$systemupdate/dash.NuiFirstUse/playsafety_avatar_neutral_shadow.png" id="15_0xylq"]
+[ext_resource type="Texture2D" uid="uid://lhah5csw521c" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/Legend_Menu.png" id="16_0rlo3"]
+[ext_resource type="Script" uid="uid://j7o0esfqdw7w" path="res://script/setup_part_2.gd" id="20_pd3xe"]
+[ext_resource type="Texture2D" uid="uid://cxpbgfw8kojfi" path="res://assets/Group 12.png" id="21_1ccjo"]
+[ext_resource type="Texture2D" uid="uid://b14k6g5p21stb" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/oobe.png" id="22_0xylq"]
+[ext_resource type="FontFile" uid="uid://dqny0w1wk858l" path="res://assets/font/seguisb.ttf" id="23_0rlo3"]
+
+[sub_resource type="Animation" id="Animation_psyyq"]
+resource_name = "FadeIn"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(0.3298769, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qh41b"]
+resource_name = "FadeOut"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(0.3298769, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7uuum"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kyeje"]
+_data = {
+&"FadeIn": SubResource("Animation_psyyq"),
+&"FadeOut": SubResource("Animation_qh41b"),
+&"RESET": SubResource("Animation_7uuum")
+}
+
+[node name="Setup" type="Control" unique_id=930845560]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_axbj7")
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1546010644]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade" unique_id=1836586811]
+libraries/ = SubResource("AnimationLibrary_kyeje")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="." unique_id=367416598]
+stream = ExtResource("1_ioy3b")
+playback_type = 1
+parameters/looping = true
+
+[node name="Sounds" type="Node" parent="." unique_id=1930727106]
+
+[node name="ChangeTab" type="AudioStreamPlayer" parent="Sounds" unique_id=724135975]
+stream = ExtResource("3_psyyq")
+
+[node name="ChangeTab2" type="AudioStreamPlayer" parent="Sounds" unique_id=1203322415]
+stream = ExtResource("4_qh41b")
+
+[node name="ChangeTab3" type="AudioStreamPlayer" parent="Sounds" unique_id=411662311]
+stream = ExtResource("5_7uuum")
+
+[node name="SndButtonselect" type="AudioStreamPlayer" parent="Sounds" unique_id=1528178343]
+stream = ExtResource("6_kyeje")
+
+[node name="SndButtonback" type="AudioStreamPlayer" parent="Sounds" unique_id=758965863]
+stream = ExtResource("7_pd3xe")
+
+[node name="Back" type="AudioStreamPlayer" parent="Sounds" unique_id=1118232215]
+stream = ExtResource("8_1ccjo")
+
+[node name="AcceptTile" type="AudioStreamPlayer" parent="Sounds" unique_id=971613894]
+stream = ExtResource("9_0xylq")
+
+[node name="Select" type="AudioStreamPlayer" parent="Sounds" unique_id=2100562268]
+stream = ExtResource("10_0rlo3")
+
+[node name="Select2" type="AudioStreamPlayer" parent="Sounds" unique_id=1222900368]
+stream = ExtResource("11_phex5")
+
+[node name="GoToTabs" type="AudioStreamPlayer" parent="Sounds" unique_id=929567283]
+stream = ExtResource("11_phex5")
+
+[node name="BG1" type="TextureRect" parent="." unique_id=979727284]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mjniw")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="BG1" unique_id=1528280608]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -377.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_axbj7")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect4" type="TextureRect" parent="BG1" unique_id=1988174470]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -377.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_axbj7")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BG2" type="TextureRect" parent="." unique_id=198913343]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 321.0
+grow_horizontal = 2
+texture = ExtResource("4_pil26")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="orbshadow" type="TextureRect" parent="." unique_id=825392786]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -179.0
+offset_top = -65.0
+offset_right = -59.0
+offset_bottom = 23.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("15_0xylq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="orb" type="TextureRect" parent="." unique_id=334863265]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = -123.0
+offset_right = -75.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("16_0rlo3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Part1" type="Control" parent="." unique_id=201482469]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_pil26")
+
+[node name="TileHalo" type="TextureRect" parent="Part1" unique_id=214560668]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.5
+offset_top = -220.75
+offset_right = 288.5
+offset_bottom = 220.75
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_7nrv4")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Part1" unique_id=44045184]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.77197
+offset_top = -106.25
+offset_right = 157.77197
+offset_bottom = 106.25
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_wtsu7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="Part1/TextureRect2" unique_id=22686182]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -97.0
+offset_right = 147.61824
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_16he7")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Part1" unique_id=1458237056]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = 3.0
+offset_right = 105.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_8gxcc")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Part1" unique_id=1740677702]
+libraries/ = SubResource("AnimationLibrary_kyeje")
+
+[node name="Part2" type="Control" parent="." unique_id=1792393444]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("20_pd3xe")
+
+[node name="oobe" type="TextureRect" parent="Part2" unique_id=1949314995]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -385.5611
+offset_top = -220.375
+offset_right = 385.5611
+offset_bottom = 200.375
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_1ccjo")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="obbe" type="TextureRect" parent="Part2" unique_id=1718677164]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -220.375
+offset_right = 384.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_0xylq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Part2" unique_id=1103092554]
+libraries/ = SubResource("AnimationLibrary_kyeje")
+
+[node name="Label" type="Label" parent="Part2" unique_id=915544871]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 42.0
+offset_right = 635.0
+offset_bottom = 84.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.3137255)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("23_0rlo3")
+theme_override_font_sizes/font_size = 30
+text = "Language"
+vertical_alignment = 1
