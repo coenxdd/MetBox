@@ -1,16 +1,12 @@
 extends Control
 
 var Tile = 1
-var disabled = false
+var disabled = true
 var Tempvar
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$MiddleAD/HTTPRequest.request("https://xbl.toonix.ink/spotlight/pull.json")
-	$"../GamerTag".text = Xbox.GamerTag
-	$"../GamerPic".texture = Xbox.GamerPicTexture
-	$"../Social/Username".text = Xbox.GamerTag
-	$"../Social/GamerScore/Score".text = str(int(Xbox.GamerScore))
+	$MiddleAD/HTTPRequest.request("https://xbl.toonix.ink/games/pull.json")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,10 +18,10 @@ func _input(_event: InputEvent) -> void:
 		if Input.is_action_just_pressed("up"):
 			if Tile == 2:
 				$"../../Sounds/Select2".play()
-				$QuickPlay/AnimationPlayer.play("Down")
-				$Disc/AnimationPlayer.play("Up")
+				$GameMarket/AnimationPlayer.play("Down")
+				$MyGames/AnimationPlayer.play("Up")
 				Tile = 1
-				$Disc.grab_focus()
+				$MyGames.grab_focus()
 			elif Tile == 5:
 				$"../../Sounds/Select2".play()
 				$SideAD2/AnimationPlayer.play("Down")
@@ -41,20 +37,20 @@ func _input(_event: InputEvent) -> void:
 				$SideAD2.grab_focus()
 			elif Tile == 1:
 				$"../../Sounds/Select2".play()
-				$QuickPlay/AnimationPlayer.play("Up")
-				$Disc/AnimationPlayer.play("Down")
+				$GameMarket/AnimationPlayer.play("Up")
+				$MyGames/AnimationPlayer.play("Down")
 				Tile = 2
-				$QuickPlay.grab_focus()
+				$GameMarket.grab_focus()
 		elif Input.is_action_just_pressed("right"):
 			if Tile == 2:
 				$"../../Sounds/Select2".play()
-				$QuickPlay/AnimationPlayer.play("Down")
+				$GameMarket/AnimationPlayer.play("Down")
 				$MiddleAD/AnimationPlayer.play("Up")
 				Tile = 3
 				$MiddleAD.grab_focus()
 			elif Tile == 1:
 				$"../../Sounds/Select2".play()
-				$Disc/AnimationPlayer.play("Down")
+				$MyGames/AnimationPlayer.play("Down")
 				$MiddleAD/AnimationPlayer.play("Up")
 				Tile = 3
 				$MiddleAD.grab_focus()
@@ -64,31 +60,13 @@ func _input(_event: InputEvent) -> void:
 				$SideAD/AnimationPlayer.play("Up")
 				Tile = 4
 				$SideAD.grab_focus()
-			elif Tile == 5 or Tile == 4:
-				disabled = true
-				$"../../Sounds/ChangeTab3".play()
-				$AnimationPlayer.play("SlideOutToLeft")
-				$"../TabsText/Social".modulate.a = 1
-				$"../TabsText/Home".modulate.a = 0.5
-				$"../Social/AnimationPlayer".play("SlideInToRight")
-				$"../Social".show()
-				if $"../Social".Tile == 1:
-					$"../Social/Friends".grab_focus()
-				elif $"../Social".Tile == 2:
-					$"../Social/SocialApps".grab_focus()
-				elif $"../Social".Tile == 3:
-					$"../Social/SignInOut".grab_focus()
-				await $AnimationPlayer.animation_finished
-				$".".hide()
-				$"../Social".disabled = false
-				
 		elif Input.is_action_just_pressed("left"):
 			if Tile == 3:
 				$"../../Sounds/Select2".play()
 				$MiddleAD/AnimationPlayer.play("Down")
-				$Disc/AnimationPlayer.play("Up")
+				$MyGames/AnimationPlayer.play("Up")
 				Tile = 1
-				$Disc.grab_focus()
+				$MyGames.grab_focus()
 			elif Tile == 4:
 				$"../../Sounds/Select2".play()
 				$SideAD/AnimationPlayer.play("Down")
@@ -101,11 +79,26 @@ func _input(_event: InputEvent) -> void:
 				$MiddleAD/AnimationPlayer.play("Up")
 				Tile = 3
 				$MiddleAD.grab_focus()
+			elif Tile == 1 or Tile == 2:
+				disabled = true
+				$"../../Sounds/ChangeTab".play()
+				$AnimationPlayer.play("SlideOutToRight")
+				$"../TabsText/Video".modulate.a = 1
+				$"../TabsText/Games".modulate.a = 0.5
+				$"../Video/AnimationPlayer".play("SlideInToLeft")
+				$"../Video".show()
+				if $"../Video".Tile == 5:
+					$"../Video/SideAd2".grab_focus()
+				elif $"../Video".Tile == 7:
+					$"../Video/SideAd4".grab_focus()
+				await $AnimationPlayer.animation_finished
+				$".".hide()
+				$"../Video".disabled = false
 
 func _on_middlead_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
 	var json1 = JSON.parse_string(body.get_string_from_utf8())
 	var ads = int(json1["Ads"])
-	print(ads)
+	print("GAMEADS: " + str(ads))
 	var loopcount = 1
 	for I in range(0,ads):
 		var ad = json1["ad" + str(loopcount)]

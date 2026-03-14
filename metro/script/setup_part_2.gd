@@ -16,7 +16,7 @@ func _input(_event: InputEvent) -> void:
 	if disabled == false:
 		if Input.is_action_just_pressed("a"):
 			$"../Sounds/SndButtonselect".play()
-			$"../Ambient".play()
+			Xbox.UpdateSave()
 			$AnimationPlayer.play("FadeOut")
 			disabled = true
 			

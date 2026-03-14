@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://b8pmpwbjcqbqk"]
+
+[ext_resource type="Script" uid="uid://c263d33npm38n" path="res://script/prof.gd" id="1_xjv3t"]
+[ext_resource type="Texture2D" uid="uid://cik5jsssu185g" path="res://14699/PNG/$systemupdate/dash.NuiFirstUse/playsafety_avatar_neutral_shadow.png" id="2_48rfy"]
+[ext_resource type="Texture2D" uid="uid://bls4a6x5cyxw8" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/AvatarSilhouette.png" id="3_dajkf"]
+[ext_resource type="Texture2D" uid="uid://6aogs5chonie" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_xam/32_fffe07d10002000900010009.png" id="4_6mtfa"]
+[ext_resource type="FontFile" uid="uid://dc3jt1rngv6in" path="res://assets/font/Segoe UI-Light.ttf" id="5_fcbik"]
+[ext_resource type="Texture2D" uid="uid://d1higcvue8ymj" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/ico_32x_gamerscore.png" id="6_hoeu3"]
+[ext_resource type="Texture2D" uid="uid://v7h3gndjkt22" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/LiveLogo.png" id="7_orao3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_st4qm"]
+
+[node name="Prof" type="Panel" unique_id=1886756563]
+custom_minimum_size = Vector2(409.12, 0)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_st4qm")
+script = ExtResource("1_xjv3t")
+
+[node name="avatarshadow" type="TextureRect" parent="." unique_id=1635703067]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 194.0
+offset_right = 243.00034
+offset_bottom = 281.99927
+texture = ExtResource("2_48rfy")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Avatar" type="TextureRect" parent="." unique_id=1049960428]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.56
+offset_top = -287.0
+offset_right = 229.44
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dajkf")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="GamerPic" type="TextureRect" parent="." unique_id=1207986806]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.12
+offset_top = 54.0
+offset_right = -225.12
+offset_bottom = 85.0
+grow_horizontal = 0
+texture = ExtResource("4_6mtfa")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="GamerTag" type="Label" parent="." unique_id=721998854]
+layout_mode = 1
+offset_left = 154.0
+offset_top = 93.0
+offset_right = 532.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("5_fcbik")
+theme_override_font_sizes/font_size = 20
+text = "xboxer"
+vertical_alignment = 1
+
+[node name="GamerScore" type="HBoxContainer" parent="." unique_id=221816079]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.559998
+offset_top = 22.0
+offset_right = 91.44
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="Score" type="Label" parent="GamerScore" unique_id=1790284635]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_fonts/font = ExtResource("5_fcbik")
+theme_override_font_sizes/font_size = 17
+text = "0"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="Control" parent="GamerScore" unique_id=913208517]
+custom_minimum_size = Vector2(9.44, 9.44)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GamerScore/TextureRect2" unique_id=2089549897]
+custom_minimum_size = Vector2(9.44, 9.44)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 15.0
+offset_bottom = 25.0
+texture = ExtResource("6_hoeu3")
+stretch_mode = 3
+
+[node name="XblEnabled" type="TextureRect" parent="." unique_id=2027643298]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 120.0
+offset_right = 234.0
+offset_bottom = 131.0
+texture = ExtResource("7_orao3")
+expand_mode = 1
+stretch_mode = 4

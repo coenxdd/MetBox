@@ -1,0 +1,352 @@
+[gd_scene format=3 uid="uid://bxicojvvtx6mu"]
+
+[ext_resource type="Script" uid="uid://8srksf5bhesl" path="res://script/login.gd" id="1_gt2v1"]
+[ext_resource type="AudioStream" uid="uid://dao7vq6pxjntr" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/1 (xwb).wav" id="2_sskwy"]
+[ext_resource type="AudioStream" uid="uid://dsvjjeweyvqhh" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/6 (xwb).wav" id="3_2sa1i"]
+[ext_resource type="AudioStream" uid="uid://bnhihlnn4mdqe" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/28 (xwb).wav" id="4_tjke5"]
+[ext_resource type="AudioStream" uid="uid://b0o1q2g6y3110" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/snd_buttonselect.wav" id="5_ah6kc"]
+[ext_resource type="AudioStream" uid="uid://1dtea53d327a" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/snd_buttonback.wav" id="6_lgo3d"]
+[ext_resource type="AudioStream" uid="uid://btyjqcggudknm" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/24 (xwb).wav" id="7_h21lg"]
+[ext_resource type="AudioStream" uid="uid://n6git17a6pb8" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/36 (xwb).wav" id="8_ogupo"]
+[ext_resource type="AudioStream" uid="uid://bo16hvmrcktli" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/34 (xwb).wav" id="9_leojw"]
+[ext_resource type="AudioStream" uid="uid://bjtym1ae0qkbn" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/23 (xwb).wav" id="10_1vhwa"]
+[ext_resource type="Texture2D" uid="uid://dhve0uoc5t1ex" path="res://14699/JPG/$systemupdate/su20076000_00000000/System Update/$flash_dash/aura_background.jpg" id="11_oateb"]
+[ext_resource type="Texture2D" uid="uid://bkx6ng024p4m1" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/aura_lowlight.png" id="12_hnvd5"]
+[ext_resource type="Texture2D" uid="uid://dw823bot6w18g" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/aura_highlight.png" id="13_i413s"]
+[ext_resource type="Texture2D" uid="uid://83qa0jlj5po6" path="res://assets/signinandoutex.jpg" id="14_7ocnh"]
+[ext_resource type="FontFile" uid="uid://ck8c1l0ac2qb2" path="res://assets/font/segoeui.ttf" id="20_ywk02"]
+[ext_resource type="Texture2D" uid="uid://clxp1xqt8wqts" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_signin/CreateProfileIcon.png" id="21_p1nht"]
+[ext_resource type="FontFile" uid="uid://dc3jt1rngv6in" path="res://assets/font/Segoe UI-Light.ttf" id="29_4gdcn"]
+[ext_resource type="Texture2D" uid="uid://bls4a6x5cyxw8" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/AvatarSilhouette.png" id="30_ghpbd"]
+[ext_resource type="Texture2D" uid="uid://cik5jsssu185g" path="res://14699/PNG/$systemupdate/dash.NuiFirstUse/playsafety_avatar_neutral_shadow.png" id="31_jdax7"]
+[ext_resource type="Texture2D" uid="uid://lhah5csw521c" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/Legend_Menu.png" id="45_ejdq5"]
+
+[sub_resource type="Animation" id="Animation_psyyq"]
+resource_name = "FadeIn"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(0.3298769, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qh41b"]
+resource_name = "FadeOut"
+length = 0.45
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(0.3298769, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7uuum"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ocnh"]
+_data = {
+&"FadeIn": SubResource("Animation_psyyq"),
+&"FadeOut": SubResource("Animation_qh41b"),
+&"RESET": SubResource("Animation_7uuum")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_st4qm"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_st4qm"]
+_data = {
+&"FadeIn": SubResource("Animation_psyyq"),
+&"FadeOut": SubResource("Animation_qh41b"),
+&"RESET": SubResource("Animation_7uuum")
+}
+
+[node name="Control" type="Control" unique_id=260184037]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gt2v1")
+
+[node name="Sounds" type="Node" parent="." unique_id=858946662]
+
+[node name="ChangeTab" type="AudioStreamPlayer" parent="Sounds" unique_id=1499745973]
+stream = ExtResource("2_sskwy")
+
+[node name="ChangeTab2" type="AudioStreamPlayer" parent="Sounds" unique_id=749325976]
+stream = ExtResource("3_2sa1i")
+
+[node name="ChangeTab3" type="AudioStreamPlayer" parent="Sounds" unique_id=1133332587]
+stream = ExtResource("4_tjke5")
+
+[node name="SndButtonselect" type="AudioStreamPlayer" parent="Sounds" unique_id=610163101]
+stream = ExtResource("5_ah6kc")
+
+[node name="SndButtonback" type="AudioStreamPlayer" parent="Sounds" unique_id=1181589833]
+stream = ExtResource("6_lgo3d")
+
+[node name="Back" type="AudioStreamPlayer" parent="Sounds" unique_id=1668161010]
+stream = ExtResource("7_h21lg")
+
+[node name="AcceptTile" type="AudioStreamPlayer" parent="Sounds" unique_id=763755892]
+stream = ExtResource("8_ogupo")
+
+[node name="Select" type="AudioStreamPlayer" parent="Sounds" unique_id=1908618103]
+stream = ExtResource("9_leojw")
+
+[node name="Select2" type="AudioStreamPlayer" parent="Sounds" unique_id=1115404550]
+stream = ExtResource("10_1vhwa")
+
+[node name="GoToTabs" type="AudioStreamPlayer" parent="Sounds" unique_id=867992753]
+stream = ExtResource("10_1vhwa")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2054594348]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_oateb")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=505873056]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 421.0
+grow_horizontal = 2
+texture = ExtResource("12_hnvd5")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1927349992]
+modulate = Color(0.6521796, 0.65217966, 0.6521796, 1)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -377.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("13_i413s")
+expand_mode = 1
+
+[node name="example" type="TextureRect" parent="." unique_id=1006642350]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_7ocnh")
+expand_mode = 1
+
+[node name="orbshadow" type="TextureRect" parent="." unique_id=414604163]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -179.0
+offset_top = -65.0
+offset_right = -59.0
+offset_bottom = 23.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("31_jdax7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="orb" type="TextureRect" parent="." unique_id=1656727621]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = -123.0
+offset_right = -75.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("45_ejdq5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Main" type="Control" parent="." unique_id=42189037]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main" unique_id=1204494167]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -508.0
+offset_top = -88.0
+offset_right = 1338.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -120
+
+[node name="Label" type="Label" parent="Main" unique_id=521806545]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -468.0
+offset_top = 82.0
+offset_right = -90.0
+offset_bottom = 137.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("29_4gdcn")
+theme_override_font_sizes/font_size = 39
+text = "sign in or out"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Main" unique_id=1517837191]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -470.0
+offset_top = 121.0
+offset_right = -90.0
+offset_bottom = 176.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("20_ywk02")
+theme_override_font_sizes/font_size = 19
+text = "Choose your profile"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main" unique_id=651458540]
+libraries/ = SubResource("AnimationLibrary_7ocnh")
+
+[node name="2" type="Panel" parent="Main" unique_id=1340396109]
+visible = false
+custom_minimum_size = Vector2(409.12, 0)
+layout_mode = 0
+offset_left = 68.0
+offset_top = 236.0
+offset_right = 477.12
+offset_bottom = 520.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_st4qm")
+
+[node name="avatarshadow" type="TextureRect" parent="Main/2" unique_id=877219665]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 194.0
+offset_right = 243.00034
+offset_bottom = 281.99927
+texture = ExtResource("31_jdax7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Avatar" type="TextureRect" parent="Main/2" unique_id=1154063926]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.56
+offset_top = -287.0
+offset_right = 229.44
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_ghpbd")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Icon" type="TextureRect" parent="Main/2" unique_id=461080860]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -256.12
+offset_top = 54.0
+offset_right = -225.12
+offset_bottom = 85.0
+grow_horizontal = 0
+texture = ExtResource("21_p1nht")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="GamerTag" type="Label" parent="Main/2" unique_id=320947041]
+layout_mode = 1
+offset_left = 154.0
+offset_top = 93.0
+offset_right = 532.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("29_4gdcn")
+theme_override_font_sizes/font_size = 20
+text = "Create Profile"
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="Main/2" unique_id=402652386]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 119.0
+offset_right = 318.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.08627451)
+theme_override_constants/line_spacing = -2
+theme_override_fonts/font = ExtResource("20_ywk02")
+theme_override_font_sizes/font_size = 18
+text = "Want to make a new
+profile?"
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1585431081]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade" unique_id=2138091777]
+libraries/ = SubResource("AnimationLibrary_st4qm")

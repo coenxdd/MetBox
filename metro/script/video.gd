@@ -132,6 +132,21 @@ func _input(_event: InputEvent) -> void:
 				$SideAd4/AnimationPlayer.play("Up")
 				Tile = 7
 				$SideAd4.grab_focus()
+			elif Tile == 5 or Tile == 7:
+				disabled = true
+				$"../../Sounds/ChangeTab3".play()
+				$AnimationPlayer.play("SlideOutToLeft")
+				$"../TabsText/Games".modulate.a = 1
+				$"../TabsText/Video".modulate.a = 0.5
+				$"../Games/AnimationPlayer".play("SlideInToRight")
+				$"../Games".show()
+				if $"../Games".Tile == 1:
+					$"../Games/MyGames".grab_focus()
+				elif $"../Games".Tile == 2:
+					$"../Games/GameMarket".grab_focus()
+				await $AnimationPlayer.animation_finished
+				$".".hide()
+				$"../Games".disabled = false
 
 func _on_middlead_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
 	var json1 = JSON.parse_string(body.get_string_from_utf8())
@@ -160,6 +175,9 @@ func _on_middlead_request_completed(_result: int, _response_code: int, _headers:
 
 func _on_get_ad_image_request_completed(_result: int, _response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
 	var image = Image.new()
-	image.load_png_from_buffer(body)
+	if _headers.has("content-type: image/png") == true:
+		image.load_png_from_buffer(body)
+	elif _headers.has("content-type: image/jpeg") == true:
+		image.load_jpg_from_buffer(body)
 	var texture=ImageTexture.create_from_image(image)
 	get_node("MiddleAD/Ads/" + str(Tempvar)).Photo = texture

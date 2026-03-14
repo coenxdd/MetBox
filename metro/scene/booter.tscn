@@ -1,5 +1,148 @@
 [gd_scene format=3 uid="uid://rl5tdil7df44"]
 
+[ext_resource type="Script" uid="uid://dh3comduw8gg" path="res://script/booter.gd" id="1_dxjoj"]
+[ext_resource type="FontFile" uid="uid://caym6urh31aog" path="res://assets/font/segoeuib.ttf" id="2_k2hqe"]
+[ext_resource type="FontFile" uid="uid://ck8c1l0ac2qb2" path="res://assets/font/segoeui.ttf" id="3_wehjp"]
+[ext_resource type="FontFile" uid="uid://dc3jt1rngv6in" path="res://assets/font/Segoe UI-Light.ttf" id="4_06amn"]
+[ext_resource type="AudioStream" uid="uid://b0o1q2g6y3110" path="res://14699/WAV/$systemupdate/su20076000_00000000/System Update/$flash_dash/snd_buttonselect.wav" id="5_k2hqe"]
+[ext_resource type="Texture2D" uid="uid://cik5jsssu185g" path="res://14699/PNG/$systemupdate/dash.NuiFirstUse/playsafety_avatar_neutral_shadow.png" id="6_06amn"]
+[ext_resource type="Texture2D" uid="uid://lhah5csw521c" path="res://14699/PNG/$systemupdate/su20076000_00000000/System Update/$flash_dash/Legend_Menu.png" id="7_3m0jw"]
+[ext_resource type="Texture2D" uid="uid://b1xqp10rqkyul" path="res://14699/PNG/$systemupdate/AvatarEditor/ico_32x_error.png" id="8_3m0jw"]
+[ext_resource type="Theme" uid="uid://cptujywu8a550" path="res://scene/metrobuttons.theme" id="9_qi57i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3m0jw"]
+bg_color = Color(0.35686275, 0.64705884, 0.09803922, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qi57i"]
+bg_color = Color(0.45882353, 0.7137255, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4amar"]
+bg_color = Color(0.45882353, 0.7137255, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qfh7"]
+bg_color = Color(0.45882353, 0.7137255, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2u8pw"]
+bg_color = Color(0.35686275, 0.64705884, 0.09803922, 1)
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 6.0
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u80x5"]
+bg_color = Color(0.45882353, 0.7137255, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 6.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htx2f"]
+bg_color = Color(0.35686275, 0.64705884, 0.09803922, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvlby"]
+bg_color = Color(0.45882353, 0.7137255, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ot7w"]
+bg_color = Color(0.45882353, 0.7137255, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emc4b"]
+bg_color = Color(0.35686275, 0.64705884, 0.09803922, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hui4y"]
+bg_color = Color(0.35686275, 0.64705884, 0.09803922, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seg82"]
+bg_color = Color(0.45882353, 0.7137255, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_463v2"]
+bg_color = Color(0.45882353, 0.7137255, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tif3u"]
+bg_color = Color(0.35686275, 0.64705884, 0.09803922, 1)
+border_color = Color(1, 1, 1, 1)
+shadow_color = Color(0, 0, 0, 0.11764706)
+shadow_size = 5
+
 [node name="Control" type="Control" unique_id=111261539]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +150,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dxjoj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=297119760]
 layout_mode = 1
@@ -16,3 +160,267 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="DevMenu" type="Control" parent="." unique_id=611157713]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="DevMenu" unique_id=1161183797]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15307656, 0.15307653, 0.15307653, 1)
+
+[node name="Label" type="Label" parent="DevMenu" unique_id=791973623]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 17.0
+offset_right = 283.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("2_k2hqe")
+theme_override_font_sizes/font_size = 27
+text = "METBOX DEVMENU"
+
+[node name="Version" type="Label" parent="DevMenu" unique_id=1122664134]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -55.0
+offset_right = 284.0
+offset_bottom = -18.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_wehjp")
+theme_override_font_sizes/font_size = 27
+text = "version"
+
+[node name="GamerTag" type="Label" parent="DevMenu" unique_id=1047502005]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -507.0
+offset_top = 52.0
+offset_right = -129.0
+offset_bottom = 77.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_wehjp")
+theme_override_font_sizes/font_size = 18
+text = "(SIGNED OUT)"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BootDash" type="Button" parent="DevMenu" unique_id=880595843]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 85.0
+offset_right = 120.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("4_06amn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3m0jw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi57i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4amar")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7qfh7")
+text = "BootDash"
+
+[node name="BootLogin" type="Button" parent="DevMenu" unique_id=706469231]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 181.0
+offset_right = 120.0
+offset_bottom = 270.0
+theme_override_fonts/font = ExtResource("4_06amn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3m0jw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi57i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4amar")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7qfh7")
+text = "BootLogin"
+
+[node name="ClearUsr" type="Button" parent="DevMenu" unique_id=1376846627]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 285.0
+offset_right = 120.0
+offset_bottom = 374.0
+theme_override_fonts/font = ExtResource("4_06amn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3m0jw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi57i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4amar")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7qfh7")
+text = "ClearUserDir"
+
+[node name="BootSetup" type="Button" parent="DevMenu" unique_id=39882951]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 85.0
+offset_right = 213.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("4_06amn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3m0jw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi57i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4amar")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7qfh7")
+text = "BootSetup"
+
+[node name="SndButtonselect" type="AudioStreamPlayer" parent="DevMenu" unique_id=926134774]
+stream = ExtResource("5_k2hqe")
+
+[node name="orbshadow" type="TextureRect" parent="DevMenu" unique_id=707906065]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -179.0
+offset_top = -65.0
+offset_right = -59.0
+offset_bottom = 23.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("6_06amn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="orb" type="TextureRect" parent="DevMenu" unique_id=1089894879]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -163.0
+offset_top = -123.0
+offset_right = -75.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("7_3m0jw")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="GamerPic" type="TextureRect" parent="DevMenu" unique_id=1093384932]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -121.0
+offset_top = 50.0
+offset_right = -90.0
+offset_bottom = 81.0
+grow_horizontal = 0
+texture = ExtResource("8_3m0jw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ProfileOptions" type="Control" parent="DevMenu" unique_id=1713445998]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 216.0
+offset_top = 55.0
+offset_right = 582.0
+offset_bottom = 427.0
+
+[node name="Label2" type="Label" parent="DevMenu/ProfileOptions" unique_id=1521216033]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 21.0
+offset_right = 403.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("3_wehjp")
+theme_override_font_sizes/font_size = 18
+text = "Profile Options"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="DevMenu/ProfileOptions" unique_id=725008274]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 126.0
+offset_right = 403.0
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("3_wehjp")
+theme_override_font_sizes/font_size = 18
+text = "Change GamerTag"
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="DevMenu/ProfileOptions" unique_id=2091547589]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 152.0
+offset_right = 217.0
+offset_bottom = 192.0
+theme_override_fonts/font = ExtResource("4_06amn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2u8pw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u80x5")
+text = "xboxer"
+placeholder_text = "GamerTag"
+emoji_menu_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Set" type="Button" parent="DevMenu/ProfileOptions" unique_id=1626695374]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 197.0
+offset_right = 97.0
+offset_bottom = 225.0
+theme_override_fonts/font = ExtResource("4_06amn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3m0jw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi57i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4amar")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7qfh7")
+text = "Set"
+
+[node name="Label4" type="Label" parent="DevMenu/ProfileOptions" unique_id=1811715050]
+layout_mode = 1
+offset_left = 25.0
+offset_top = 60.0
+offset_right = 403.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("3_wehjp")
+theme_override_font_sizes/font_size = 18
+text = "Login (PID)"
+vertical_alignment = 1
+
+[node name="PIDtext" type="SpinBox" parent="DevMenu/ProfileOptions" unique_id=1260056009]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 86.0
+offset_right = 126.0
+offset_bottom = 117.0
+theme = ExtResource("9_qi57i")
+theme_override_styles/up_background = SubResource("StyleBoxFlat_htx2f")
+theme_override_styles/up_background_hovered = SubResource("StyleBoxFlat_rvlby")
+theme_override_styles/up_background_pressed = SubResource("StyleBoxFlat_5ot7w")
+theme_override_styles/up_background_disabled = SubResource("StyleBoxFlat_emc4b")
+theme_override_styles/down_background = SubResource("StyleBoxFlat_hui4y")
+theme_override_styles/down_background_hovered = SubResource("StyleBoxFlat_seg82")
+theme_override_styles/down_background_pressed = SubResource("StyleBoxFlat_463v2")
+theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_tif3u")
+
+[node name="PIDset" type="Button" parent="DevMenu/ProfileOptions" unique_id=1026887120]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 86.0
+offset_right = 217.0
+offset_bottom = 117.0
+theme = ExtResource("9_qi57i")
+theme_override_fonts/font = ExtResource("4_06amn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3m0jw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qi57i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4amar")
+theme_override_styles/focus = SubResource("StyleBoxFlat_7qfh7")
+text = "Login"
+
+[connection signal="pressed" from="DevMenu/BootDash" to="." method="_on_boot_dash_pressed"]
+[connection signal="pressed" from="DevMenu/BootLogin" to="." method="_on_boot_login_pressed"]
+[connection signal="pressed" from="DevMenu/BootSetup" to="." method="_on_boot_setup_pressed"]
+[connection signal="pressed" from="DevMenu/ProfileOptions/PIDset" to="." method="_on_pi_dset_pressed"]
